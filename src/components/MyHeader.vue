@@ -45,6 +45,16 @@
                 <div class="hero-shape hero-circle"></div>
             </div>
         </section>
+        <section class="hero-clients">
+            <ul>
+                <li><img src="../assets/images/client-logo-01.png" alt=""></li>
+                <li><img src="../assets/images/client-logo-02.png" alt=""></li>
+                <li><img src="../assets/images/client-logo-03.png" alt=""></li>
+                <li><img src="../assets/images/client-logo-04.png" alt=""></li>
+                <li><img src="../assets/images/client-logo-05.png" alt=""></li>
+                <li><img src="../assets/images/client-logo-06.png" alt=""></li>
+            </ul>
+        </section>
     </header>
 </template>
 
@@ -144,6 +154,16 @@ nav {
             right: 0;
             top: 20%;
         }
+    }
+}
+.hero-clients {
+    width: 65%;
+    margin: 0 auto;
+    ul {
+        list-style: none;
+        display: flex;
+        justify-content: space-between;
+        opacity: .5;
     }
 }
 
