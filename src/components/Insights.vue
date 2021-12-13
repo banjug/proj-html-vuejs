@@ -23,7 +23,35 @@
             </div>
         </div>
         <div class="blog-section">
-
+            <div class="bullet-points">
+                <span>ENJOYABLE INSIGHTS</span>
+                <h2>Most Viewed Best Blogs</h2>
+                <ul class="fa-ul">
+                    <li><span class="fa-li"><i class="fas fa-arrow-right"></i></span> Become a Better Blogger: Content Planning</li>
+                    <li><span class="fa-li"><i class="fas fa-arrow-right"></i></span> Promoting Your Online Business on Pinterest</li>
+                    <li><span class="fa-li"><i class="fas fa-arrow-right"></i></span> Gamification and Game-Based Learning</li>
+                    <li><span class="fa-li"><i class="fas fa-arrow-right"></i></span> Designin an Online Course from Expert's Perspective</li>
+                    <li><span class="fa-li"><i class="fas fa-arrow-right"></i></span> Why Online Courses Are the Future of Education</li>
+                </ul>
+            </div>
+            <div class="blog-post">
+                <img src="../assets/images/artist-blog-03-480x352.jpeg" alt="">
+                <span>ARTIST</span>
+                <h3>
+                    Brush Strokes Energize Trees in Paintings
+                </h3>
+                <span><i class="far fa-calendar"></i> May 15, 2020</span>
+                <span><i class="far fa-eye"></i> 688 Views</span>
+            </div>
+            <div class="blog-post">
+                <img src="../assets/images/artist-blog-01-480x352.jpg" alt="">
+                <span>ARTIST</span>
+                <h3>
+                    Pocket-Sized Notebooks Hold Miniature Paintings
+                </h3>
+                <span><i class="far fa-calendar"></i> May 15, 2020</span>
+                <span><i class="far fa-eye"></i> 603 Views</span>
+            </div>
         </div>
     </section>
 </template>
@@ -58,6 +86,22 @@ export default {
             }
             > :last-child {
                 border-right: 1px solid gray;
+            }
+        }
+        .blog-section {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 100%;
+            .bullet-points {
+                width: 40%;
+            }
+            .blog-post {
+                width: calc(25% - 50px);
+                margin-left: 50px;
+                img {
+                    width: 100%;
+                }
             }
         }
     }
