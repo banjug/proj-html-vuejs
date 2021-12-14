@@ -1,6 +1,8 @@
 <template>
   <div id="app">
-    <MyHeader/>
+    <MyHeader
+    :headerNavSections="headerNavSections"
+    />
     <MyMain/>
     <MyFooter
     :exploreLinks="exploreLinks"
@@ -23,6 +25,14 @@ export default {
   },
   data() {
     return {
+      headerNavSections: [
+        'Home',
+        'Pages',
+        'Courses',
+        'Features',
+        'Blog',
+        'Shop',
+      ],
       footerLinks: [
         {
           url: '#',

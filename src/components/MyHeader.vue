@@ -6,12 +6,7 @@
                 <a href="#" class="logo"><img class="logo" src="../assets/images/dark-logo.png" alt=""></a>
                 <div class="nav-right">
                     <ul>
-                        <li>Home <i class="fas fa-chevron-down"></i></li>
-                        <li>Home <i class="fas fa-chevron-down"></i></li>
-                        <li>Home <i class="fas fa-chevron-down"></i></li>
-                        <li>Home <i class="fas fa-chevron-down"></i></li>
-                        <li>Home <i class="fas fa-chevron-down"></i></li>
-                        <li>Home <i class="fas fa-chevron-down"></i></li>
+                        <li v-for="section, i in headerNavSections" :key="i">{{section}} <i class="fas fa-chevron-down"></i></li>
                         <li><i class="far fa-user"></i></li>
                     </ul>
                     <div class="input-wrapper">
@@ -61,6 +56,9 @@
 <script>
 export default {
     name: 'MyHeader',
+    props: {
+        headerNavSections: Array
+    }
 }
 </script>
 
@@ -84,10 +82,11 @@ nav {
                 display: flex;
                 list-style: none;
                 li {
-                    margin-right: 50px;
+                    margin-right: 30px;
+                    cursor: pointer;
                     .fa-chevron-down {
                         font-size: .6rem;
-                        margin-left: 10px;
+                        margin-left: 15px;
                     }
                     .fa-user {
                         font-size: .9rem;
