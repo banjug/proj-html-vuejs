@@ -70,11 +70,11 @@ nav {
     .nav-wrapper {
         width: 65%;
         margin: 0 auto;
-        padding: 20px 0;
+        padding: 30px 0;
         display: flex;
         justify-content: space-between;
         .logo {
-            height: 25px;
+            height: 30px;
         }
         .nav-right {
             display: flex;
@@ -106,14 +106,38 @@ nav {
         h1 {
             font-size: 3rem;
             margin-bottom: 15px;
+            font-weight: 700;
+            color: #3f3a64;
         }
         p {
+            font-size: 1.2rem;
             line-height: 200%;
-            margin-bottom: 15px;
+            margin-bottom: 35px;
+            color: #8c89a2;
         }
         button {
             display: block;
-            margin-bottom: 15px;
+            margin-bottom: 35px;
+            padding: 20px 40px;
+            border: none;
+            border-radius: 5px;
+            background: #20ad96;
+            color: #ffffff;
+            font-weight: 500;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: all .2s ease;
+            &:hover {
+                background: #3f3a64;
+            }
+        }
+        span {
+            color: #20ad96;
+            font-size: 1rem;
+            a {
+                color: #20ad96;
+                font-weight: 700;
+            }
         }
     }
     .hero-right {
