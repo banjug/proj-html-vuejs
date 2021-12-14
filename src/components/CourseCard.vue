@@ -52,6 +52,10 @@ export default {
                 h4 {
                     color: #3f3a64;
                     font-size: 1.3rem;
+                    &:hover {
+                        color: #20ad96;
+                        transition: all .2s ease;
+                    }
                 }
                 > span {
                     margin-right: 20px;
@@ -62,6 +66,7 @@ export default {
                 box-shadow: 0px 0px 15px 0px rgba(0,0,0,0.1);
                 cursor: pointer;
                 transform: scale(1.02);
+                background: #ffffff;
             }
         }
 </style>
