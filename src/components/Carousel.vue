@@ -49,6 +49,7 @@ export default {
 
 <style lang="scss" scoped>
 section {
+    background: #f5f7fa;
     text-align: center;
     .card-container {
         display: flex;

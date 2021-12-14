@@ -61,6 +61,7 @@ export default {
             }
         }
         nav {
+            background: #f5f7fa;
             width: 65%;
             margin: 100px auto;
             display: flex;

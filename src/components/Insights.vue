@@ -89,6 +89,7 @@ export default {
             }
         }
         .blog-section {
+            background: #f5f7fa;
             display: flex;
             justify-content: space-between;
             align-items: center;
