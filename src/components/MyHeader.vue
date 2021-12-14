@@ -15,7 +15,7 @@
                         <li><i class="far fa-user"></i></li>
                     </ul>
                     <div class="input-wrapper">
-                        <input type="text" placeholder="Search">
+                        <input type="text" placeholder="Search...">
                         <i class="fas fa-search"></i>
                     </div>
                 </div>
@@ -73,6 +73,7 @@ nav {
         padding: 30px 0;
         display: flex;
         justify-content: space-between;
+        align-items: center;
         .logo {
             height: 30px;
         }
@@ -84,11 +85,32 @@ nav {
                 list-style: none;
                 li {
                     margin-right: 50px;
+                    .fa-chevron-down {
+                        font-size: .6rem;
+                        margin-left: 10px;
+                    }
                     .fa-user {
+                        font-size: .9rem;
                         border: 2px solid black;
                         border-radius: 100%;
-                        padding: 2px 3px;
+                        padding: 3px 3px;
                     }
+                }
+            }
+            .input-wrapper {
+                position: relative;
+                input {
+                    padding: 20px 40px 20px 20px;
+                    border: none;
+                    border-radius: 5px;
+                    background: #f5f5f5;
+                }
+                .fa-search {
+                    color: #20ad96;
+                    position: absolute;
+                    right: 10px;
+                    top: 50%;
+                    transform: translate(0, -50%);
                 }
             }
         }
