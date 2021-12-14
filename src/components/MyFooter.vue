@@ -24,21 +24,11 @@
             <div class="wrapper-right">
                 <ul>
                     <li><strong>Explore</strong></li>
-                    <li>Start Here</li>
-                    <li>Blog</li>
-                    <li>About Us</li>
+                    <li v-for="link, i in exploreLinks" :key="i"><a :href=link.url>{{link.name}}</a></li>
                 </ul>
                 <ul>
-                    <li></li>
-                    <li>Start Here</li>
-                    <li>Blog</li>
-                    <li>About Us</li>
-                </ul>
-                <ul>
-                    <li><strong>Explore</strong></li>
-                    <li>Start Here</li>
-                    <li>Blog</li>
-                    <li>About Us</li>
+                    <li><strong>Information</strong></li>
+                    <li v-for="link, i in informationLinks" :key="i"><a :href=link.url>{{link.name}}</a></li>
                 </ul>
             </div>
         </nav>
@@ -51,6 +41,10 @@
 <script>
 export default {
     name: 'MyFooter',
+    props: {
+        exploreLinks: Array,
+        informationLinks: Array
+    }
 }
 </script>
 

@@ -2,7 +2,10 @@
   <div id="app">
     <MyHeader/>
     <MyMain/>
-    <MyFooter/>
+    <MyFooter
+    :exploreLinks="exploreLinks"
+    :informationLinks="informationLinks"
+    />
   </div>
 </template>
 
@@ -17,6 +20,75 @@ export default {
     MyHeader,
     MyMain,
     MyFooter,
+  },
+  data() {
+    return {
+      footerLinks: [
+        {
+          url: '#',
+          name: 'Start Here',
+          section: 'explore'
+        },
+        {
+          url: '#',
+          name: 'Blog',
+          section: 'explore'
+        },
+        {
+          url: '#',
+          name: 'About Us',
+          section: 'explore'
+        },
+        {
+          url: '#',
+          name: 'Success Story',
+          section: 'explore'
+        },
+        {
+          url: '#',
+          name: 'Courses',
+          section: 'explore'
+        },
+        {
+          url: '#',
+          name: 'Blog',
+          section: 'explore'
+        },
+        {
+          url: '#',
+          name: 'Contact Us',
+          section: 'explore'
+        },
+        {
+          url: '#',
+          name: 'Membership',
+          section: 'information'
+        },
+        {
+          url: '#',
+          name: 'Purchase Guide',
+          section: 'information'
+        },
+        {
+          url: '#',
+          name: 'Privacy Policy',
+          section: 'information'
+        },
+        {
+          url: '#',
+          name: 'Terms of Service',
+          section: 'information'
+        },
+      ],
+    }
+  },  
+  computed: {
+      exploreLinks() {
+          return this.footerLinks.filter(x => x.section === 'explore')
+      },
+      informationLinks() {
+          return this.footerLinks.filter(x => x.section === 'information')
+      }
   }
 }
 </script>
