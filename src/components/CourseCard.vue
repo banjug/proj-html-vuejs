@@ -1,14 +1,14 @@
 <template>
     <div class="course-card">
-                <img :src="require('../assets/images/' + course.img)" alt="">
-                <div class="card-data">
-                    <h3 v-if="course.price !== 0">${{course.price}}<span>.00</span></h3>
-                    <h3 v-else>Free</h3>
-                    <h4>{{course.title}}</h4>
-                    <span><i class="far fa-file-alt"></i> {{course.lessons}} Lessons</span>
-                    <span><i class="far fa-user"></i> {{course.students}} Students</span>
-                </div>
-            </div>
+        <img :src="require('../assets/images/' + course.img)" alt="">
+        <div class="card-data">
+            <h3 v-if="course.price !== 0">${{course.price}}<span>.00</span></h3>
+            <h3 v-else>Free</h3>
+            <h4>{{course.title}}</h4>
+            <span><i class="far fa-file-alt"></i> {{course.lessons}} Lessons</span>
+            <span><i class="far fa-user"></i> {{course.students}} Students</span>
+        </div>
+    </div>
 </template>
 
 <script>
@@ -51,6 +51,7 @@ export default {
                 }
                 h4 {
                     color: #3f3a64;
+                    font-size: 1.3rem;
                 }
                 > span {
                     margin-right: 20px;

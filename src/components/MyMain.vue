@@ -1,7 +1,7 @@
 <template>
     <main>
         <FeaturedCourses/>
-        <AvailableCourses/>
+        <CourseBenefits/>
         <Carousel/>
         <Insights/>
     </main>
@@ -9,7 +9,7 @@
 
 <script>
 import FeaturedCourses from '@/components/FeaturedCourses.vue'
-import AvailableCourses from '@/components/AvailableCourses.vue'
+import CourseBenefits from '@/components/CourseBenefits.vue'
 import Carousel from '@/components/Carousel.vue'
 import Insights from '@/components/Insights.vue'
 
@@ -17,7 +17,7 @@ export default {
     name: 'MyMain',
     components: {
         FeaturedCourses,
-        AvailableCourses,
+        CourseBenefits,
         Carousel,
         Insights,
     }
