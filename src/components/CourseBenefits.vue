@@ -12,15 +12,17 @@
         <div class="get-started">
             <div class="started-vid">
                     <a href="https://www.youtube.com/" target="_blank" >
-                        <img src="../assets/images/home-2-popup-video-poster.jpg" alt="" class="vid-thumbnail">
+                        <div class="thumb-wrapper">
+                            <div class="vid-thumbnail"></div>
+                        </div>
                         <img src="../assets/images/icon-youtube-play.png" alt="" class="yt-btn">
-                        <img class="vid-shape vid-shape-1" src="../assets/images/maxcoach-shape-05.png" alt="">
-                        <img class="vid-shape vid-shape-2" src="../assets/images/maxcoach-shape-07.png" alt="">
-                        <div class="vid-shape vid-circle"></div>
-                        <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg" class="vid-shape vid-blob">
-                                <path fill="#ECC5AB" d="M43.6,-65.5C57.9,-58.6,72,-48.9,71.9,-36.5C71.8,-24.1,57.6,-8.9,49.6,3.1C41.6,15.2,40,24.2,37.3,38.7C34.7,53.2,31,73.3,23.2,72.6C15.4,72,3.4,50.6,-13.7,45.9C-30.8,41.2,-53.1,53.2,-63.1,50C-73.2,46.8,-71,28.4,-72.5,11.1C-74,-6.2,-79.1,-22.3,-72.4,-31.5C-65.8,-40.7,-47.5,-43.1,-33.5,-50.1C-19.4,-57.2,-9.7,-68.9,2.4,-72.7C14.6,-76.6,29.2,-72.4,43.6,-65.5Z" transform="translate(100 100)" />
-                        </svg>
                     </a>
+                    <img class="vid-shape vid-shape-1" src="../assets/images/maxcoach-shape-05.png" alt="">
+                    <img class="vid-shape vid-shape-2" src="../assets/images/maxcoach-shape-07.png" alt="">
+                    <div class="vid-shape vid-circle"></div>
+                    <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg" class="vid-shape vid-blob">
+                            <path fill="#ECC5AB" d="M43.6,-65.5C57.9,-58.6,72,-48.9,71.9,-36.5C71.8,-24.1,57.6,-8.9,49.6,3.1C41.6,15.2,40,24.2,37.3,38.7C34.7,53.2,31,73.3,23.2,72.6C15.4,72,3.4,50.6,-13.7,45.9C-30.8,41.2,-53.1,53.2,-63.1,50C-73.2,46.8,-71,28.4,-72.5,11.1C-74,-6.2,-79.1,-22.3,-72.4,-31.5C-65.8,-40.7,-47.5,-43.1,-33.5,-50.1C-19.4,-57.2,-9.7,-68.9,2.4,-72.7C14.6,-76.6,29.2,-72.4,43.6,-65.5Z" transform="translate(100 100)" />
+                    </svg>
             </div>
             <div class="started-info">
                 <span>GET STARTED <span>EFFORTLESSLY</span></span>
@@ -102,10 +104,22 @@ export default {
             align-items: center;
             .started-vid {
                 position: relative;
-                .vid-thumbnail {
-                    border-radius: 5px;
-                    position: relative;
-                    z-index: 1;
+                .thumb-wrapper {
+                    width: 670px;
+                    height: 450px;
+                    overflow: hidden;
+                    .vid-thumbnail {
+                        background-image: url('../assets/images/home-2-popup-video-poster.jpg');
+                        width: 100%;
+                        height: 100%;
+                        border-radius: 5px;
+                        background-size: cover;
+                        z-index: 1;
+                            transition: all .2s ease;
+                        &:hover {
+                            transform: scale(1.1);
+                        }
+                    }
                 }
                 .yt-btn {
                     position: absolute;
