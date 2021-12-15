@@ -138,8 +138,8 @@ export default {
                     margin-left: 50px;
                     background: #ffffff;
                     border-radius: 5px;
+                    transition: all .3s ease;
                     &:hover {
-                        transition: all .4s ease;
                         box-shadow: 0px 0px 15px 0px rgba(0,0,0,0.1);
                         transform: scale(1.03);
 
