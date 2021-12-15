@@ -3,39 +3,11 @@
         <span>GRAT WORDS ABOUT MAXCOACH</span>
         <h2>Our <span>top learners'</span> verbatim</h2>
         <div class="card-container">
-            <div class="card side">
-                <h3>High level of efficiency and scientific teaching methods</h3>
-                <p>I am free to learn at my own pace, follow my own schedule and choose the subject I want to learn from the syllabus. Great study portal for people like me.</p>
-                <div>
-                    <img src="../assets/images/testimonial-avata-02.jpg" alt="">
-                    <div>
-                        <h4>MINA HOLLACE</h4>
-                        <span>/ Freelancer</span>
-                    </div>
-                </div>
-            </div>
-            <div class="card">
-                <h3>High level of efficiency and scientific teaching methods</h3>
-                <p>I am free to learn at my own pace, follow my own schedule and choose the subject I want to learn from the syllabus. Great study portal for people like me.</p>
-                <div>
-                    <img src="../assets/images/testimonial-avata-02.jpg" alt="">
-                    <div>
-                        <h4>MINA HOLLACE</h4>
-                        <span>/ Freelancer</span>
-                    </div>
-                </div>
-            </div>
-            <div class="card side">
-                <h3>High level of efficiency and scientific teaching methods</h3>
-                <p>I am free to learn at my own pace, follow my own schedule and choose the subject I want to learn from the syllabus. Great study portal for people like me.</p>
-                <div>
-                    <img src="../assets/images/testimonial-avata-02.jpg" alt="">
-                    <div>
-                        <h4>MINA HOLLACE</h4>
-                        <span>/ Freelancer</span>
-                    </div>
-                </div>
-            </div>            
+            <CarouselCard
+            v-for="review, i in reviews"
+            :key="i"
+            :review="review"
+            />
         </div>
         <div class="page-selector">
             <div class="dot active"></div>
@@ -55,8 +27,39 @@
 </template>
 
 <script>
+import CarouselCard from '@/components/CarouselCard.vue'
 export default {
     name: 'Carousel',
+    components: {
+        CarouselCard
+    },
+    data() {
+        return {
+            reviews:[
+                {
+                    name: "Florence Themes",
+                    job: "Multimedia Admin",
+                    title: "It's a coiche of quality for people with special needs",
+                    text: "I'm a very strict person so I require everything to be organized and neat. Then, I'll be able to make things right and shine. MaxCoach guys just got me.",
+                    img: "testimonial-avata-03.jpg"
+                },
+                {
+                    name: "Mina Hollace",
+                    job: "Freelancer",
+                    title: "High level of efficiency and scientific teaching methods",
+                    text: "I am free to learn at my own pace, follow my own schedule and choose the subject I want to learn from the syllabus. Great study portal for people like me.",
+                    img: "testimonial-avata-02.jpg"
+                },
+                {
+                    name: "Madley Pondor",
+                    job: "IT Specialist",
+                    title: "Professional team of specialists and passionate mentors at reach",
+                    text: "I need to get a certification for English proficiency and MaxCoach is my best choice. Their tutors are smart and professional when dealing with students.",
+                    img: "testimonial-avata-04.jpg"
+                },
+            ]
+        }
+    }
 }
 </script>
 
@@ -88,35 +91,8 @@ section {
     .card-container {
         display: flex;
         margin: 50px 0;
-        .card {
-            width: calc((100% / 3) - 80px);
-            margin: 0 40px;
-            text-align: left;
-            padding: 50px;
-            background: #ffffff;
-            border-radius: 5px;
-            &.side {
-                opacity: .5;
-            }
-            h3, h4 {
-                color: #3f3a64;
-            }
-            p, span {
-                color: #696969;
-            }
-            > * {
-                margin-bottom: 50px;
-                font-size: 1.3rem;
-            }
-            > div {
-                display: flex;
-                align-items: center;
-                img {
-                    border-radius: 100%;
-                    max-height: 100px;
-                    margin-right: 30px;
-                }
-            }
+        >div:first-child, >div:last-child {
+            opacity: .5;
         }
     }
     .page-selector {
