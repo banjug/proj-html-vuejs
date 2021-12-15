@@ -5,7 +5,7 @@
                 Subscribe <span>Newsletters</span>
             </h2>
             <span>Enter your email addres to register to our newsletter subscription delivered on a regular basis!</span>
-            <input type="text" placeholder="Enter your email">
+            <input type="email" placeholder="Enter your email">
             <button>Subscribe</button>
             <img class="footer-shape shape-1" src="../assets/images/maxcoach-shape-02.png" alt="">
             <img class="footer-shape shape-2" src="../assets/images/maxcoach-shape-09.png" alt="">
@@ -20,10 +20,10 @@
                         <li>+1 (305) 547-9909 (9am - 5pm EST, Monday - Friday)</li>
                         <li>support@maxcoach.com</li>
                     </ul>
-                        <i class="fab fa-facebook-square"></i>
-                        <i class="fab fa-twitter"></i>
-                        <i class="fab fa-instagram"></i>
-                        <i class="fab fa-linkedin"></i>
+                        <a href="https://www.facebook.com/" target="_blank"><i class="fab fa-facebook-square"></i></a>
+                        <a href="https://twitter.com/" target="_blank"><i class="fab fa-twitter"></i></a>
+                        <a href="https://www.instagram.com/" target="_blank"><i class="fab fa-instagram"></i></a>
+                        <a href="https://www.linkedin.com/" target="_blank"><i class="fab fa-linkedin"></i></a>
                 </div>
                 <div class="wrapper-right">
                     <ul>
@@ -134,8 +134,16 @@ export default {
                 ul {
                     list-style: none;
                 }
+                li {
+                    color: #696969;
+                    a {
+                        color: #696969;
+                        text-decoration: none;
+                    }
+                }
                 strong {
                     font-size: 1.2rem;
+                    color: #333333;
                 }
                 .wrapper-left {
                     * {
@@ -144,15 +152,20 @@ export default {
                     i {
                         margin-right: 40px;
                         font-size: 1.5rem;
+                        color: #b1b1b1;
                     }
                 }
                 .wrapper-right {
                     display: flex;
-                    align-items: flex-end;
                     ul {
-                        margin-left: 50px;
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: flex-end;
+                        flex-wrap: wrap;
+                        margin-left: 125px;
+                        height: 200px;
                         li {
-                            margin-bottom: 20px;
+                            margin: 0 0 20px 50px;
                         }
                     }
                 }
@@ -160,6 +173,7 @@ export default {
         }
         .rights {
             text-align: center;
+            color: #b1b1b1;
         }
     }
 </style>
