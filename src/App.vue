@@ -8,6 +8,7 @@
     :exploreLinks="exploreLinks"
     :informationLinks="informationLinks"
     />
+    <div class="top-btn" @click="scrollToTop" v-if="scroll > 800"><i class="fas fa-arrow-up"></i></div>
   </div>
 </template>
 
@@ -90,6 +91,7 @@ export default {
           section: 'information'
         },
       ],
+      scroll: 0
     }
   },  
   computed: {
@@ -99,6 +101,17 @@ export default {
       informationLinks() {
           return this.footerLinks.filter(x => x.section === 'information')
       }
+  },
+  methods: {
+    scrollToTop() {
+      window.scrollTo(0,0)
+    },
+    getScroll() {
+      this.scroll = window.scrollY;
+    }
+  },
+  created() {
+    window.addEventListener('scroll', this.getScroll)
   }
 }
 </script>
@@ -114,5 +127,23 @@ export default {
 #app {
   font-family: 'Roboto', sans-serif;
   width: 100%;
+  .top-btn {
+    width: 80px;
+    aspect-ratio: 1;
+    background: #20ad96;
+    position: fixed;
+    bottom: 10%;
+    right: 5%;
+    border-radius: 100%;
+    cursor: pointer;
+    .fa-arrow-up {
+      color: #ffffff;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      font-size: 1.6rem;
+    }
+  }
 }
 </style>
