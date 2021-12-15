@@ -76,7 +76,7 @@ export default {
         padding-bottom: 100px;
         position: relative;
         >span {
-            color: #8c89a2;
+            color: #918ea6;
             font-size: 1.3rem;
         }
         >h2{
@@ -149,7 +149,7 @@ export default {
                 padding: 0 80px;
                 >span {
                     display: block;
-                    color: #8c89a2;
+                    color: #918ea6;
                     font-size: 1.2rem;
                     >span {
                         display: inline;
@@ -188,7 +188,7 @@ export default {
             right: 0;
             bottom: 0;
             transform:rotate(90deg);
-            fill: #f5f7fa;
+            fill: #f8f8f8;
         }
     }
 </style>

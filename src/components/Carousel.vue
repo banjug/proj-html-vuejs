@@ -62,7 +62,7 @@ export default {
 
 <style lang="scss" scoped>
 section {
-    background: #f5f7fa;
+    background: #f8f8f8;
     text-align: center;
     padding: 100px;
     >span {

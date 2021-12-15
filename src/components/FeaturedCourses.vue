@@ -79,7 +79,7 @@ section {
     padding: 100px 0;
     text-align: center;
     > span {
-        color: #8c89a2;
+        color: #918ea6;
         font-size: 1.3rem;
     }
     > h2 {
